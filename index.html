@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>曹苡萱的網站</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; /* 隱藏滾動條 */
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+    }
+
+    #p5-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1; /* 將畫布放在最底層作為背景 */
+    }
+
+    #content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      color: #fff;
+      text-align: center;
+    }
+
+    h2, h3 {
+      margin: 0;
+    }
+
+    .info-text {
+      font-size: 1.2em;
+      margin-top: 10px;
+      background-color: rgba(0, 0, 0, 0.5); 
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .photo-container {
+      margin-top: 20px;
+    }
+
+    .my-photo {
+      width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 更新後的側邊欄樣式 */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: calc(100vw / 10);
+      height: 100vh;
+      background-color: rgba(255, 255, 153, 0.45); /* 鵝黃色透明 */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px; /* 從上方開始排列 */
+      z-index: 2;
+    }
+
+    #sidebar a {
+      margin: 20px 0;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    #sidebar a:hover {
+      color: #0000cc;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js"></script>
+  <script src="sketch.js"></script>
+</head>
+<body>
+  <!-- 側邊欄 -->
+ <!-- 側邊選單 -->
+
+ <div id="sidebar">
+    <a href="https://byong4795-max.github.io/20251014/" target="_blank">作品1</a>
+    <a href="https://byong4795-max.github.io/20251014.2/"showContent target="_blank">作品2</a>
+    <a href="https://hackmd.io/@4z_zmNqrRyaTBKhbf-vkTg/Bk8U_dJhgx" target="_blank">作品3</a>
+    <a href="https://youtu.be/dQw4w9WgXcQ?si=ce-HzAJr4PcKqm0m" target="_blank">作品4</a>
+  </div>
+
+<!-- 彈出視窗 -->
+<div id="popup"></div>
+
+
+  <!-- 原本內容 -->
+  <div id="content">
+    <div class="info-text">
+      <h2>淡江大學教育科技學系</h2>
+      <h3>學號: 414730050</h3>
+      <h3>姓名: 曹苡萱</h3>
+    </div>
+    <div class="photo-container">
+      <img src="341320.jpg" alt="我的照片" class="my-photo" />
+    </div>
+  </div>
+</body>
+</html>
